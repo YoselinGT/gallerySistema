@@ -40,6 +40,10 @@ class Database{
     public function the_insert_id(){
         return $this->connection->insert_id;
     }
+
+    public function the_inser_id(){
+        return mysql_insertid($this->connection);
+    }
 }
 
 $database = new Database();
